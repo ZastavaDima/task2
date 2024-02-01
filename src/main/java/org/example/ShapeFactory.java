@@ -21,9 +21,6 @@ public class ShapeFactory {
             case 1:
                 this.shape = createStar(3, new Point(0, 0), (double)this.width / 2.0D, (double)this.width / 2.0D);
                 break;
-            case 2:
-            case 4:
-            case 6:
             case 8:
             default:
                 throw new Error("type is nusupported");
@@ -50,7 +47,6 @@ public class ShapeFactory {
             case 1:
                 this.stroke = new BasicStroke(3.0F);
                 break;
-            case 2:
             case 5:
             case 6:
             default:
@@ -64,7 +60,7 @@ public class ShapeFactory {
                 this.paint = new GradientPaint((float)(-this.width), (float)(-this.height), Color.white, (float)this.width, (float)this.height, Color.gray, true);
                 break;
             case 8:
-                this.paint = Color.red;
+                this.paint = Color.gray;
         }
 
     }
